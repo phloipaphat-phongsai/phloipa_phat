@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ploypapas's Portfolio | พลอยปภัสน ผองใส</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt & Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Itim&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: {
+                50: '#FAF8F5',
+                100: '#F4EFEA',
+                200: '#E8DEC8',
+              },
+              warm: {
+                50: '#FDFBF7',
+                100: '#F7F1E5',
+                200: '#E7D4B5',
+                300: '#D0B8A6',
+                400: '#B8926A',
+                500: '#A07247',
+                600: '#89562B',
+                700: '#683F1D',
+                800: '#4A2B11',
+              },
+              mocha: '#5C3D2E',
+            },
+            fontFamily: {
+              sans: ['Prompt', 'sans-serif'],
+              cute: ['Itim', 'cursive'],
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Prompt', sans-serif;
+        background-color: #FAF8F5;
+        color: #4A2B11;
+      }
+      .font-cute {
+        font-family: 'Itim', cursive;
+      }
+      /* Custom Cute Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F4EFEA;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D0B8A6;
+        border-radius: 20px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #B8926A;
+      }
+    </style>
+</head>
+<body class="antialiased selection:bg-warm-200 selection:text-warm-800">
+
+  <!-- Navigation Bar -->
+  <nav class="fixed top-0 left-0 w-full bg-cream-50/80 backdrop-blur-md z-50 border-b border-warm-200/50 transition-all duration-300">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-xl font-cute font-bold text-warm-700 flex items-center gap-2 hover:scale-105 transition-transform">
+        <span class="bg-warm-200 text-warm-700 w-8 h-8 rounded-full flex items-center justify-center text-sm">✨</span>
+        Dream's Portfolio
+      </a>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-warm-700">
+        <a href="#about" class="hover:text-warm-500 transition-colors">เกี่ยวกับฉัน</a>
+        <a href="#experience" class="hover:text-warm-500 transition-colors">ฝึกประสบการณ์</a>
+        <a href="#activities" class="hover:text-warm-500 transition-colors">ค่าย & กิจกรรม</a>
+        <a href="#awards" class="hover:text-warm-500 transition-colors">ผลงาน & รางวัล</a>
+        <a href="#education" class="hover:text-warm-500 transition-colors">ประวัติการศึกษา</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-warm-700 focus:outline-none">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-cream-100 border-b border-warm-200 px-6 py-4 space-y-3">
+      <a href="#about" class="block text-warm-700 hover:text-warm-500">เกี่ยวกับฉัน</a>
+      <a href="#experience" class="block text-warm-700 hover:text-warm-500">ฝึกประสบการณ์</a>
+      <a href="#activities" class="block text-warm-700 hover:text-warm-500">ค่าย & กิจกรรม</a>
+      <a href="#awards" class="block text-warm-700 hover:text-warm-500">ผลงาน & รางวัล</a>
+      <a href="#education" class="block text-warm-700 hover:text-warm-500">ประวัติการศึกษา</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center pt-24 pb-12 px-6 relative overflow-hidden">
+    <!-- Floating background decorative elements -->
+    <div class="absolute top-20 left-10 w-32 h-32 bg-warm-200/40 rounded-full blur-2xl -z-10 animate-pulse"></div>
+    <div class="absolute bottom-10 right-10 w-48 h-48 bg-warm-300/30 rounded-full blur-3xl -z-10"></div>
+    
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <div class="inline-block px-4 py-1.5 bg-warm-200/60 rounded-full text-warm-700 text-sm font-cute mb-2 shadow-sm">
+        👋🏻 ยินดีต้อนรับสู่แฟ้มสะสมผลงาน
+      </div>
+      
+      <!-- Profile Avatar Placeholder / Image -->
+      <div class="relative w-40 h-40 mx-auto mb-6">
+        <div class="w-full h-full rounded-full bg-warm-300 p-1.5 shadow-lg shadow-warm-800/5">
+          <div class="w-full h-full rounded-full bg-cream-100 flex items-center justify-center overflow-hidden border-2 border-white">
+            <!-- Warm Girl Avatar Illustration -->
+            <svg class="w-28 h-28 text-warm-500 mt-2" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+            </svg>
+          </div>
+        </div>
+        <span class="absolute bottom-2 right-2 bg-warm-400 text-white p-2 rounded-full text-xs shadow-md">
+          ☕️
+        </span>
+      </div>
+
+      <h1 class="text-3xl md:text-5xl font-bold text-warm-800 tracking-tight">
+        นางสาว พลอยปภัสน ผองใส
+      </h1>
+      <p class="text-xl md:text-2xl font-cute text-warm-600 font-medium">
+        "น้องดรีม" (Dream) 🌱
+      </p>
+
+      <p class="max-w-xl mx-auto text-warm-700/80 leading-relaxed text-sm md:text-base">
+        นักเรียนสายวิทยาศาสตร์-คณิตศาสตร์ ที่มีความสนใจในด้านสาธารณสุข ฟิสิกส์ และการเรียนรู้สิ่งใหม่ๆ รอบตัว พร้อมที่จะเรียนรู้และพัฒนาตนเองอยู่เสมอ
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4 pt-4">
+        <a href="#about" class="px-6 py-3 bg-warm-600 hover:bg-warm-700 text-white font-medium rounded-2xl shadow-md shadow-warm-600/20 transition-all hover:-translate-y-0.5">
+          ทำความรู้จักเพิ่มเติม <i class="fa-solid fa-arrow-down ml-2 text-xs"></i>
+        </a>
+        <a href="#experience" class="px-6 py-3 bg-cream-100 hover:bg-warm-200/50 text-warm-700 font-medium rounded-2xl border border-warm-300/50 transition-all">
+          ดูประสบการณ์ฝึกงาน
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Personal Info Section -->
+  <section id="about" class="py-16 px-6 bg-cream-100/60">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <div class="text-center space-y-2">
+        <h2 class="text-2xl md:text-3xl font-bold text-warm-800">เกี่ยวกับฉัน (About Me)</h2>
+        <p class="text-warm-500 font-cute text-base">ข้อมูลส่วนตัวและกิจกรรมยามว่าง</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Personal Info Card -->
+        <div class="bg-white p-6 rounded-3xl border border-warm-200/60 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-warm-100 flex items-center justify-center text-warm-600">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <h3 class="font-bold text-lg text-warm-800">ข้อมูลส่วนตัว</h3>
+          </div>
+          <ul class="space-y-3 text-warm-700 text-sm">
+            <li class="flex justify-between border-b border-cream-100 pb-2">
+              <span class="text-warm-400">ชื่อ-นามสกุล:</span>
+              <span class="font-medium">นางสาว พลอยปภัสน ผองใส</span>
+            </li>
+            <li class="flex justify-between border-b border-cream-100 pb-2">
+              <span class="text-warm-400">ชื่อเล่น:</span>
+              <span class="font-medium">ดรีม (Dream)</span>
+            </li>
+            <li class="flex justify-between border-b border-cream-100 pb-2">
+              <span class="text-warm-400">อายุ:</span>
+              <span class="font-medium">17 ปี</span>
+            </li>
+            <li class="flex justify-between border-b border-cream-100 pb-2">
+              <span class="text-warm-400">วันเกิด:</span>
+              <span class="font-medium">10 มีนาคม 2551</span>
+            </li>
+            <li class="flex justify-between border-b border-cream-100 pb-2">
+              <span class="text-warm-400">สัญชาติ / เพศ:</span>
+              <span class="font-medium">ไทย / หญิง</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hobbies Card -->
+        <div class="bg-white p-6 rounded-3xl border border-warm-200/60 shadow-sm hover:shadow-md transition-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-warm-100 flex items-center justify-center text-warm-600">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3 class="font-bold text-lg text-warm-800">งานอดิเรก (Hobbies)</h3>
+          </div>
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <div class="p-3 bg-cream-50 rounded-2xl border border-warm-200/40 flex items-center gap-3">
+              <span class="text-xl">📖</span>
+              <span class="text-sm font-medium text-warm-700">อ่านหนังสือ</span>
+            </div>
+            <div class="p-3 bg-cream-50 rounded-2xl border border-warm-200/40 flex items-center gap-3">
+              <span class="text-xl">🎧</span>
+              <span class="text-sm font-medium text-warm-700">ดูหนัง / ฟังเพลง</span>
+            </div>
+            <div class="p-3 bg-cream-50 rounded-2xl border border-warm-200/40 flex items-center gap-3">
+              <span class="text-xl">🏃🏻‍♀️</span>
+              <span class="text-sm font-medium text-warm-700">ออกกำลังกาย</span>
+            </div>
+            <div class="p-3 bg-cream-50 rounded-2xl border border-warm-200/40 flex items-center gap-3">
+              <span class="text-xl">🎸</span>
+              <span class="text-sm font-medium text-warm-700">เล่นกีตาร์</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internship / Hospital Experience Section -->
+  <section id="experience" class="py-16 px-6">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <div class="text-center space-y-2">
+        <span class="px-3 py-1 bg-warm-200 text-warm-800 rounded-full text-xs font-cute">Hospital Internship</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-warm-800">การฝึกประสบการณ์วิชาชีพ</h2>
+        <p class="text-warm-500 text-sm">การเข้าร่วมฝึกประสบการณ์ ณ โรงพยาบาลอำนาจเจริญ</p>
+      </div>
+
+      <div class="bg-white rounded-3xl p-6 md:p-8 border border-warm-200/80 shadow-sm relative overflow-hidden">
+        <!-- Accent Corner -->
+        <div class="absolute top-0 right-0 w-24 h-24 bg-warm-100 rounded-bl-full -z-0 opacity-50"></div>
+        
+        <div class="relative z-10 space-y-6">
+          <div class="flex flex-wrap justify-between items-start gap-2 border-b border-cream-100 pb-4">
+            <div>
+              <h3 class="text-xl font-bold text-warm-800 flex items-center gap-2">
+                🏥 โรงพยาบาลอำนาจเจริญ
+              </h3>
+              <p class="text-warm-600 font-medium text-sm mt-1">การฝึกประสบการณ์วิชาชีพทางสาธารณสุขและบุคลากรทางการแพทย์</p>
+            </div>
+            <span class="px-3 py-1 bg-warm-100 text-warm-700 rounded-xl text-xs font-semibold">
+              3 - 14 มีนาคม 2568
+            </span>
+          </div>
+
+          <p class="text-warm-700/90 text-sm leading-relaxed">
+            ได้รับความรู้และทักษะเกี่ยวกับงานด้านสาธารณสุขและระบบการทำงานของบุคลากรทางการแพทย์ในแต่ละสาขา ได้เรียนรู้การใช้อุปกรณ์ทางการแพทย์หลากหลายประเภท เห็นกระบวนการทำงานจริง และสัมผัสกับสภาพแวดล้อมจริงในการดูแลรักษาผู้ป่วย
+          </p>
+
+          <div>
+            <h4 class="font-bold text-warm-800 text-sm mb-3 flex items-center gap-2">
+              <i class="fa-solid fa-stethoscope text-warm-500"></i> แผนกที่ได้เข้าศึกษาและฝึกปฏิบัติงาน:
+            </h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1.5 bg-cream-100 text-warm-800 rounded-xl text-xs font-medium border border-warm-200/50">👩🏻‍⚕️ หอผู้ป่วยอายุกรรมหญิง</span>
+              <span class="px-3 py-1.5 bg-cream-100 text-warm-800 rounded-xl text-xs font-medium border border-warm-200/50">🦾 เวชศาสตร์ฟื้นฟู</span>
+              <span class="px-3 py-1.5 bg-cream-100 text-warm-800 rounded-xl text-xs font-medium border border-warm-200/50">🧠 จิตเวช</span>
+              <span class="px-3 py-1.5 bg-cream-100 text-warm-800 rounded-xl text-xs font-medium border border-warm-200/50">💊 เภสัชกรรม</span>
+              <span class="px-3 py-1.5 bg-cream-100 text-warm-800 rounded-xl text-xs font-medium border border-warm-200/50">🥗 โภชนศาสตร์</span>
+              <span class="px-3 py-1.5 bg-cream-100 text-warm-800 rounded-xl text-xs font-medium border border-warm-200/50">🦷 ทันตกรรม</span>
+              <span class="px-3 py-1.5 bg-cream-100 text-warm-800 rounded-xl text-xs font-medium border border-warm-200/50">🔬 ห้องปฏิบัติการ (LAB)</span>
+              <span class="px-3 py-1.5 bg-cream-100 text-warm-800 rounded-xl text-xs font-medium border border-warm-200/50">🏭 อาชีวอนามัย</span>
+              <span class="px-3 py-1.5 bg-cream-100 text-warm-800 rounded-xl text-xs font-medium border border-warm-200/50">🩻 รังสีวิทยา</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSN Camp Highlight Section -->
+  <section id="activities" class="py-16 px-6 bg-cream-100/60">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <div class="text-center space-y-2">
+        <span class="px-3 py-1 bg-warm-200 text-warm-800 rounded-full text-xs font-cute">Highlight Experience</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-warm-800">ค่ายวิชาการ & การอบรม</h2>
+        <p class="text-warm-500 text-sm">ค่ายโอลิมปิกวิชาการและกิจกรรมพัฒนาทักษะวิทยาศาสตร์</p>
+      </div>
+
+      <!-- POSN Card Special -->
+      <div class="bg-gradient-to-br from-warm-100 to-cream-100 rounded-3xl p-6 md:p-8 border border-warm-300/60 shadow-sm space-y-4">
+        <div class="flex flex-wrap justify-between items-start gap-2">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl bg-warm-500 text-white flex items-center justify-center font-bold text-xl shadow-md">
+              ⚛️
+            </div>
+            <div>
+              <h3 class="text-lg md:text-xl font-bold text-warm-800">โครงการค่ายโอลิมปิกวิชาการ สอวน. ค่าย 1 วิชาฟิสิกส์</h3>
+              <p class="text-xs text-warm-600">ปีการศึกษา 2567 | โรงเรียนลือคำหาญวารินชำราบ</p>
+            </div>
+          </div>
+          <span class="px-3 py-1 bg-warm-200 text-warm-800 rounded-full text-xs font-semibold">5 - 20 ตุลาคม 2567</span>
+        </div>
+
+        <div class="bg-white/80 backdrop-blur-sm p-4 rounded-2xl border border-warm-200/50 space-y-2">
+          <h4 class="font-bold text-warm-800 text-sm flex items-center gap-2">
+            💡 สิ่งที่ได้เรียนรู้และความประทับใจ:
+          </h4>
+          <p class="text-warm-700/90 text-sm leading-relaxed">
+            ได้รับความรู้และทักษะในการวิเคราะห์โจทย์ การคำนวณเชิงลึก และการเข้าใจหลักการทางฟิสิกส์อย่างเป็นระบบ ได้ลงมือทดลองจริงด้วยอุปกรณ์ทางวิทยาศาสตร์ที่หลากหลาย ทำให้เข้าใจแนวคิดต่าง ๆ เช่น <span class="font-semibold text-warm-800">กลศาสตร์ ไฟฟ้า และคลื่น</span> ได้ชัดเจนมากขึ้น
+          </p>
+          <p class="text-warm-700/90 text-sm leading-relaxed italic border-l-2 border-warm-400 pl-3 mt-2">
+            "ประทับใจบรรยากาศการเรียนรู้ที่เปิดกว้าง สนุก ท้าทาย มีกิจกรรมเสริมความคิด การแข่งขัน และการพูดคุยแลกเปลี่ยนกับเพื่อนๆ สร้างแรงบันดาลใจและความมุ่งมั่นในการพัฒนาตนเองอย่างต่อเนื่อง"
+          </p>
+        </div>
+      </div>
+
+      <!-- Grid of Other Science Activities -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Activity 1 -->
+        <div class="bg-white p-6 rounded-3xl border border-warm-200/60 shadow-sm space-y-3">
+          <div class="flex justify-between items-start">
+            <span class="text-2xl">🌱</span>
+            <span class="text-xs font-medium text-warm-500 bg-cream-100 px-2.5 py-1 rounded-lg">15-16 ส.ค. 2568</span>
+          </div>
+          <h4 class="font-bold text-warm-800 text-base">ค่ายเยาวชนนักคิด ตะลุยวิทย์ เกษตร และธรรมชาติ</h4>
+          <p class="text-xs text-warm-500">สถานีวิจัยลำตะคอง อ.ปากช่อง จ.นครราชสีมา</p>
+          <p class="text-xs text-warm-700 leading-relaxed bg-cream-50 p-3 rounded-xl border border-cream-100">
+            <strong>สิ่งที่ได้รับ:</strong> ได้เรียนรู้วิธีการสตาฟฟ์สัตว์ การดูแลพืชและต้นไม้หายากอย่างถูกวิธี พร้อมรับความรู้ด้านการอนุรักษ์ธรรมชาติและสิ่งแวดล้อมจากศูนย์การเรียนรู้ กฝพ. ลำตะคอง
+          </p>
+        </div>
+
+        <!-- Activity 2 -->
+        <div class="bg-white p-6 rounded-3xl border border-warm-200/60 shadow-sm space-y-3">
+          <div class="flex justify-between items-start">
+            <span class="text-2xl">🧬</span>
+            <span class="text-xs font-medium text-warm-500 bg-cream-100 px-2.5 py-1 rounded-lg">6 ก.ค. 2567</span>
+          </div>
+          <h4 class="font-bold text-warm-800 text-base">การอบรมการสกัดสารจากพืช & DNA</h4>
+          <p class="text-xs text-warm-500">คณะวิทยาศาสตร์ มหาวิทยาลัยราชภัฏอุบลราชธานี</p>
+          <p class="text-xs text-warm-700 leading-relaxed bg-cream-50 p-3 rounded-xl border border-cream-100">
+            <strong>สิ่งที่ได้รับ:</strong> อบรมเชิงปฏิบัติการเรื่องการสกัดสารจากพืชและการใช้ประโยชน์ การสกัด DNA อย่างง่าย และเทคนิคเจลอิเล็กโทรโฟริซีส (Gel Electrophoresis)
+          </p>
+        </div>
+
+        <!-- Activity 3 -->
+        <div class="bg-white p-6 rounded-3xl border border-warm-200/60 shadow-sm space-y-3">
+          <div class="flex justify-between items-start">
+            <span class="text-2xl">🌊</span>
+            <span class="text-xs font-medium text-warm-500 bg-cream-100 px-2.5 py-1 rounded-lg">26-27 พ.ย. 2565</span>
+          </div>
+          <h4 class="font-bold text-warm-800 text-base">ค่ายวิทยาศาสตร์ทางทะเลและการอนุรักษ์</h4>
+          <p class="text-xs text-warm-500">ต.แสมสาร อ.สัตหีบ จ.ชลบุรี</p>
+          <p class="text-xs text-warm-700 leading-relaxed bg-cream-50 p-3 rounded-xl border border-cream-100">
+            <strong>สิ่งที่ได้รับ:</strong> เรียนรู้ระบบนิเวศทางทะเล สำรวจสิ่งมีชีวิตชายฝั่ง ลงมือปฏิบัติจริง และปลูกจิตสำนึกในการรักษ์ท้องทะเล
+          </p>
+        </div>
+
+        <!-- Activity 4 -->
+        <div class="bg-white p-6 rounded-3xl border border-warm-200/60 shadow-sm space-y-3">
+          <div class="flex justify-between items-start">
+            <span class="text-2xl">🧪</span>
+            <span class="text-xs font-medium text-warm-500 bg-cream-100 px-2.5 py-1 rounded-lg">ปีการศึกษา 2568</span>
+          </div>
+          <h4 class="font-bold text-warm-800 text-base">UBU Lab for School & UBU Lab Camp</h4>
+          <p class="text-xs text-warm-500">มหาวิทยาลัยอุบลราชธานี (ห้องเรียน GIP)</p>
+          <p class="text-xs text-warm-700 leading-relaxed bg-cream-50 p-3 rounded-xl border border-cream-100">
+            <strong>สิ่งที่ได้รับ:</strong> โครงการเพิ่มและพัฒนาทักษะทางวิชาการ ยกระดับคุณภาพการศึกษาปฏิบัติการห้องทดลองทางวิทยาศาสตร์
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Leadership Section -->
+  <section id="awards" class="py-16 px-6">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <div class="text-center space-y-2">
+        <span class="px-3 py-1 bg-warm-200 text-warm-800 rounded-full text-xs font-cute">Achievements & Leadership</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-warm-800">รางวัล และ บทบาทผู้นำ</h2>
+        <p class="text-warm-500 text-sm">ความภาคภูมิใจ และการทำหน้าที่วิทยากรส่งต่อความรู้</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Award Card -->
+        <div class="md:col-span-3 bg-gradient-to-r from-warm-200/60 to-cream-100 p-6 rounded-3xl border border-warm-300/50 flex flex-col md:flex-row items-center gap-6">
+          <div class="w-16 h-16 rounded-2xl bg-warm-500 text-white flex-shrink-0 flex items-center justify-center text-3xl shadow-lg">
+            🏆
+          </div>
+          <div class="space-y-1 text-center md:text-left">
+            <span class="text-xs font-bold text-warm-600 uppercase tracking-wider">รางวัลแห่งความภาคภูมิใจ</span>
+            <h3 class="text-lg font-bold text-warm-800">ได้รับรางวัลชมเชย การแข่งขันทักษะการใช้เครื่องมือทางวิทยาศาสตร์ และเทคโนโลยี</h3>
+            <p class="text-sm text-warm-700">ณ คณะวิทยาศาสตร์ มหาวิทยาลัยอุบลราชธานี</p>
+          </div>
+        </div>
+
+        <!-- Leadership Role 1 -->
+        <div class="bg-white p-6 rounded-3xl border border-warm-200/60 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-warm-100 flex items-center justify-center text-warm-600 text-lg">
+            🎤
+          </div>
+          <h4 class="font-bold text-warm-800 text-base">วิทยากรค่ายปรับพื้นฐาน SMTE</h4>
+          <p class="text-xs text-warm-500">13 - 15 พฤษภาคม 2567</p>
+          <p class="text-xs text-warm-700 leading-relaxed">
+            ปฏิบัติหน้าที่วิทยากรดำเนินกิจกรรมค่ายปรับพื้นฐาน วิทยาศาสตร์ คณิตศาสตร์ เทคโนโลยี และสิ่งแวดล้อม (SMTE) ปีการศึกษา 2567
+          </p>
+        </div>
+
+        <!-- Leadership Role 2 -->
+        <div class="bg-white p-6 rounded-3xl border border-warm-200/60 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-warm-100 flex items-center justify-center text-warm-600 text-lg">
+            🌟
+          </div>
+          <h4 class="font-bold text-warm-800 text-base">วิทยากรค่ายปรับพื้นฐาน GIP</h4>
+          <p class="text-xs text-warm-500">ปีการศึกษา 2567</p>
+          <p class="text-xs text-warm-700 leading-relaxed">
+            ได้รับมอบหมายหน้าที่วิทยากรดำเนินกิจกรรมค่ายปรับพื้นฐาน นักเรียนห้องเรียนพิเศษวิทยาศาสตร์และคณิตศาสตร์ (GIP) ม.1
+          </p>
+        </div>
+
+        <!-- Leadership Role 3 -->
+        <div class="bg-white p-6 rounded-3xl border border-warm-200/60 shadow-sm space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-warm-100 flex items-center justify-center text-warm-600 text-lg">
+            🎈
+          </div>
+          <h4 class="font-bold text-warm-800 text-base">จัดนิทรรศการวันวิทยาศาสตร์</h4>
+          <p class="text-xs text-warm-500">ซุ้ม "ปิงปองโชว์"</p>
+          <p class="text-xs text-warm-700 leading-relaxed">
+            ได้รับมอบหมายให้จัดซุ้มนำเสนอกฎของนิวตันเกี่ยวกับแรง การเคลื่อนที่ และแรงปฏิกิริยา ฝึกทักษะการสังเกตและการวางแผนเชิงฟิสิกส์
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Timeline Section -->
+  <section id="education" class="py-16 px-6 bg-cream-100/60">
+    <div class="max-w-4xl mx-auto space-y-8">
+      <div class="text-center space-y-2">
+        <span class="px-3 py-1 bg-warm-200 text-warm-800 rounded-full text-xs font-cute">Education Path</span>
+        <h2 class="text-2xl md:text-3xl font-bold text-warm-800">ประวัติการศึกษา</h2>
+        <p class="text-warm-500 text-sm">เส้นทางการศึกษาตั้งแต่ระดับประถมศึกษาจนถึงปัจจุบัน</p>
+      </div>
+
+      <!-- Timeline Cards -->
+      <div class="relative border-l-2 border-warm-300 ml-4 md:ml-32 space-y-8">
+        
+        <!-- High School -->
+        <div class="relative pl-6">
+          <!-- Bullet Point -->
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-warm-500 border-4 border-white"></div>
+          <div class="bg-white p-5 rounded-2xl border border-warm-200/60 shadow-sm">
+            <span class="text-xs font-bold text-warm-500">มัธยมศึกษาตอนปลาย</span>
+            <h3 class="text-base font-bold text-warm-800 mt-0.5">โรงเรียนปทุมราชวงศา</h3>
+            <p class="text-xs text-warm-600 mt-1">แผนการเรียนวิทยาศาสตร์ - คณิตศาสตร์</p>
+          </div>
+        </div>
+
+        <!-- Junior High School -->
+        <div class="relative pl-6">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-warm-400 border-4 border-white"></div>
+          <div class="bg-white p-5 rounded-2xl border border-warm-200/60 shadow-sm">
+            <span class="text-xs font-bold text-warm-500">มัธยมศึกษาตอนต้น</span>
+            <h3 class="text-base font-bold text-warm-800 mt-0.5">โรงเรียนปทุมราชวงศา</h3>
+          </div>
+        </div>
+
+        <!-- Primary School -->
+        <div class="relative pl-6">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-warm-300 border-4 border-white"></div>
+          <div class="bg-white p-5 rounded-2xl border border-warm-200/60 shadow-sm">
+            <span class="text-xs font-bold text-warm-500">อนุบาล - ประถมศึกษา</span>
+            <h3 class="text-base font-bold text-warm-800 mt-0.5">โรงเรียนธันยธรณพิทักษ์ 2</h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-warm-800 text-cream-100 py-10 px-6">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+      <p class="font-cute text-xl text-warm-200">"Thank you for visiting my portfolio!" 🤍</p>
+      <p class="text-xs text-warm-300/80">
+        © 2026 Ploypapas Phongsai (Dream). Designed with Minimal Warm Brown Style.
+      </p>
+      <div class="pt-2">
+        <a href="#" class="text-xs text-warm-200 hover:text-white bg-warm-700/60 px-4 py-2 rounded-full border border-warm-600 transition-colors">
+          <i class="fa-solid fa-arrow-up mr-1"></i> กลับขึ้นด้านบน
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Navigation Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking menu items
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
