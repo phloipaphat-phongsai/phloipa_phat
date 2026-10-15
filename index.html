@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanya Jomponmang - Academic Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Kanit', 'sans-serif'],
+                        en: ['Inter', 'sans-serif']
+                    },
+                    colors: {
+                        primary: '#2d3748', // Minimal dark slate
+                        secondary: '#4a5568',
+                        accent: '#a0aec0',
+                        bglight: '#f7fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f7fafc;
+            color: #2d3748;
+        }
+        /* Reveal animation classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Custom subtle background pattern */
+        .bg-pattern {
+            background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="antialiased bg-pattern font-sans flex flex-col min-h-screen">
+
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100 transition-all duration-300" id="navbar">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold tracking-wider font-en text-primary">KANYA<span class="text-gray-400">.J</span></a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#about" class="text-secondary hover:text-black transition-colors duration-200">เกี่ยวกับฉัน</a>
+                <a href="#education" class="text-secondary hover:text-black transition-colors duration-200">ประวัติการศึกษา</a>
+                <a href="#skills" class="text-secondary hover:text-black transition-colors duration-200">ความสามารถพิเศษ</a>
+                <a href="#contact" class="text-secondary hover:text-black transition-colors duration-200">ติดต่อ</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-secondary hover:text-black focus:outline-none" id="mobile-menu-btn">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu Dropdown -->
+        <div class="md:hidden hidden bg-white border-b border-gray-100 px-6 py-4 space-y-4 shadow-lg absolute w-full" id="mobile-menu">
+            <a href="#about" class="block text-secondary hover:text-black transition-colors">เกี่ยวกับฉัน</a>
+            <a href="#education" class="block text-secondary hover:text-black transition-colors">ประวัติการศึกษา</a>
+            <a href="#skills" class="block text-secondary hover:text-black transition-colors">ความสามารถพิเศษ</a>
+            <a href="#contact" class="block text-secondary hover:text-black transition-colors">ติดต่อ</a>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-24">
+        <section class="min-h-[80vh] flex items-center justify-center relative px-6">
+            <div class="max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
+                <div class="w-full md:w-3/5 text-center md:text-left reveal">
+                    <p class="text-sm tracking-[0.2em] text-gray-500 uppercase mb-3 font-en">Academic Portfolio</p>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 leading-tight font-en">
+                        Kanya Jomponmang
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-600 mb-6 font-light">
+                        นางสาว กันยา จอมพลเมือง (ของขวัญ)
+                    </h2>
+                    <p class="text-lg text-gray-500 mb-8 max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        นักศึกษาชั้นปีที่ 1 หลักสูตรสาธารณสุขศาสตรบัณฑิต<br>
+                        สาขาวิชาสาธารณสุขชุมชน
+                    </p>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="#about" class="px-8 py-3 bg-primary text-white rounded-full text-sm font-medium hover:bg-black transition-colors duration-300 shadow-md hover:shadow-lg">
+                            รู้จักฉันมากขึ้น
+                        </a>
+                        <a href="#contact" class="px-8 py-3 bg-white text-primary border border-gray-200 rounded-full text-sm font-medium hover:border-gray-400 transition-all duration-300">
+                            ติดต่อฉัน
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="w-48 h-48 md:w-72 md:h-72 relative reveal">
+                    <!-- Placeholder for Profile Picture -->
+                    <div class="w-full h-full rounded-full bg-gray-200 border-4 border-white shadow-xl overflow-hidden relative">
+                         <img src="https://raw.githubusercontent.com/69202302008-lang/kanya-jomponmang.p/main/f0e4ea6fa9f8b051a520567821deee48.jpg" alt="Kanya Jomponmang" class="object-cover w-full h-full">
+                    </div>
+                    <!-- Decorative circle -->
+                    <div class="absolute -z-10 top-4 -right-4 w-full h-full rounded-full border border-gray-300"></div>
+                </div>
+            </div>
+            
+            <!-- Scroll indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <a href="#about" class="text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="py-24 bg-white px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center gap-4 mb-12 reveal">
+                    <div class="h-px bg-gray-300 flex-grow"></div>
+                    <h2 class="text-3xl font-medium px-4">เกี่ยวกับฉัน</h2>
+                    <div class="h-px bg-gray-300 flex-grow"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center reveal">
+                    <div class="bg-bglight p-8 rounded-2xl shadow-sm border border-gray-100">
+                        <i class="fas fa-quote-left text-3xl text-gray-300 mb-4"></i>
+                        <p class="text-gray-700 leading-loose text-lg">
+                            ฉันชอบอยู่คนเดียวเงียบๆ โลกส่วนตัวค่อนข้างสูง ฉันชอบกินของอร่อยๆ เพื่อมีความสุข ฉันชอบมากๆ ชอบนอนด้วยนะ ถึงดูขี้เกียจแต่ก็ขยันบ้างครั้ง
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex flex-col gap-2">
+                            <h3 class="text-xl font-medium text-primary">การศึกษาปัจจุบัน</h3>
+                            <p class="text-gray-600 leading-relaxed border-l-4 border-gray-300 pl-4 py-2">
+                                ปัจจุบันกำลังศึกษาที่<br>
+                                <strong class="text-primary">วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</strong><br>
+                                ศึกษาอยู่ชั้นปีที่ 1<br>
+                                หลักสูตรสาธารณสุขศาสตรบัณฑิต<br>
+                                สาขาวิชาสาธารณสุขชุมชน
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-24 px-6 relative">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center gap-4 mb-16 reveal">
+                    <div class="h-px bg-gray-300 flex-grow"></div>
+                    <h2 class="text-3xl font-medium px-4">ประวัติการศึกษา</h2>
+                    <div class="h-px bg-gray-300 flex-grow"></div>
+                </div>
+
+                <div class="relative border-l border-gray-200 ml-3 md:ml-6 space-y-12">
+                    <!-- Education Item 1 -->
+                    <div class="relative pl-8 md:pl-0 reveal">
+                        <div class="md:flex items-center justify-between">
+                            <div class="md:w-1/3 flex md:justify-end pr-8">
+                                <div class="hidden md:block text-right">
+                                    <span class="text-xl font-bold text-gray-300 font-en">2563</span>
+                                </div>
+                            </div>
+                            <div class="absolute w-4 h-4 bg-white border-2 border-primary rounded-full -left-[8.5px] md:left-1/3 md:-ml-2 top-1.5 md:top-auto z-10"></div>
+                            <div class="md:w-2/3 md:pl-10">
+                                <span class="md:hidden text-sm font-bold text-gray-400 mb-1 block">2563</span>
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                                    <h3 class="text-lg font-medium text-primary mb-1">ระดับมัธยมศึกษาตอนต้น</h3>
+                                    <p class="text-gray-600">โรงเรียนบ้านสระสี่เหลี่ยม</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="relative pl-8 md:pl-0 reveal">
+                        <div class="md:flex items-center justify-between">
+                            <div class="md:w-1/3 flex md:justify-end pr-8">
+                                <div class="hidden md:block text-right">
+                                    <span class="text-xl font-bold text-gray-300 font-en">2566</span>
+                                </div>
+                            </div>
+                            <div class="absolute w-4 h-4 bg-white border-2 border-primary rounded-full -left-[8.5px] md:left-1/3 md:-ml-2 top-1.5 md:top-auto z-10"></div>
+                            <div class="md:w-2/3 md:pl-10">
+                                <span class="md:hidden text-sm font-bold text-gray-400 mb-1 block">2566</span>
+                                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                                    <h3 class="text-lg font-medium text-primary mb-1">ระดับมัธยมศึกษาตอนปลาย</h3>
+                                    <p class="text-gray-600">โรงเรียนหนองบัวพิทยาคม</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 3 -->
+                    <div class="relative pl-8 md:pl-0 reveal">
+                        <div class="md:flex items-center justify-between">
+                            <div class="md:w-1/3 flex md:justify-end pr-8">
+                                <div class="hidden md:block text-right">
+                                    <span class="text-xl font-bold text-gray-800 font-en">2569</span>
+                                    <span class="block text-xs text-primary font-medium mt-1 uppercase tracking-wider">Present</span>
+                                </div>
+                            </div>
+                            <div class="absolute w-5 h-5 bg-primary border-4 border-white rounded-full -left-[10.5px] md:left-1/3 md:-ml-[10px] top-1 md:top-auto shadow-sm z-10"></div>
+                            <div class="md:w-2/3 md:pl-10">
+                                <span class="md:hidden text-sm font-bold text-gray-800 mb-1 flex items-center gap-2">
+                                    2569 <span class="text-[10px] bg-primary text-white px-2 py-0.5 rounded-full">Present</span>
+                                </span>
+                                <div class="bg-white p-6 rounded-xl shadow-md border-t-2 border-primary relative overflow-hidden">
+                                    <div class="absolute top-0 right-0 w-16 h-16 bg-gray-50 rounded-bl-full -z-10"></div>
+                                    <h3 class="text-lg font-medium text-primary mb-2">ระดับปริญญาตรี (กำลังศึกษา)</h3>
+                                    <p class="text-gray-700 font-medium mb-1">วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</p>
+                                    <p class="text-sm text-gray-500">หลักสูตรสาธารณสุขศาสตรบัณฑิต สาขาวิชาสาธารณสุขชุมชน</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-24 bg-white px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center gap-4 mb-16 reveal">
+                    <div class="h-px bg-gray-300 flex-grow"></div>
+                    <h2 class="text-3xl font-medium px-4">ความสามารถพิเศษ</h2>
+                    <div class="h-px bg-gray-300 flex-grow"></div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center reveal">
+                    <!-- Skill 1 -->
+                    <div class="group p-8 rounded-2xl bg-bglight border border-gray-100 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-hand-sparkles text-2xl text-gray-600"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-800">จักสานไม้ไผ่</h3>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="group p-8 rounded-2xl bg-bglight border border-gray-100 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-cookie-bite text-2xl text-gray-600"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-800">ทำขนมไทย /<br>เบเกอรี่</h3>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="group p-8 rounded-2xl bg-bglight border border-gray-100 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-scissors text-2xl text-gray-600"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-800">ถอนผมหงอก<br>เก่ง</h3>
+                    </div>
+
+                    <!-- Skill 4 -->
+                    <div class="group p-8 rounded-2xl bg-bglight border border-gray-100 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center shadow-sm mb-4 group-hover:scale-110 transition-transform duration-300">
+                            <i class="fas fa-gamepad text-2xl text-gray-600"></i>
+                        </div>
+                        <h3 class="font-medium text-gray-800">เล่นเกมส์</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-24 px-6 relative overflow-hidden">
+            <div class="max-w-4xl mx-auto relative z-10">
+                <div class="bg-primary text-white rounded-3xl p-8 md:p-12 shadow-2xl reveal">
+                    <div class="text-center mb-10">
+                        <h2 class="text-3xl font-medium mb-4 text-white">ช่องทางการติดต่อ</h2>
+                        <p class="text-gray-300 font-light">หากต้องการติดต่อหรือสอบถามข้อมูลเพิ่มเติม สามารถติดต่อได้ตามช่องทางด้านล่าง</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <a href="tel:0807707713" class="flex items-center gap-4 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-colors">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 mb-1 font-en">Phone</p>
+                                    <p class="font-medium tracking-wide">080-770-7713</p>
+                                </div>
+                            </a>
+
+                            <a href="mailto:69202302008@scphkk.ac.th" class="flex items-center gap-4 p-4 rounded-xl hover:bg-white/10 transition-colors group break-all">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-white group-hover:text-primary transition-colors">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 mb-1 font-en">Email</p>
+                                    <p class="font-medium font-en">69202302008@scphkk.ac.th</p>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="space-y-6">
+                            <a href="https://instagram.com/k_kkkkkkk2008" target="_blank" class="flex items-center gap-4 p-4 rounded-xl hover:bg-white/10 transition-colors group">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-white group-hover:text-primary transition-colors">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 mb-1 font-en">Instagram</p>
+                                    <p class="font-medium font-en">@k_kkkkkkk2008</p>
+                                </div>
+                            </a>
+
+                            <div class="flex items-start gap-4 p-4 rounded-xl">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0 mt-1">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400 mb-1 font-en">Address</p>
+                                    <p class="font-medium leading-relaxed">
+                                        33 หมู่ 9 ต.หนองบัว อ.คง<br>
+                                        จ.นครราชสีมา 30260
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Decorative background elements for contact section -->
+            <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-gray-200 rounded-full opacity-50 blur-3xl -z-10"></div>
+            <div class="absolute top-0 -left-24 w-64 h-64 bg-gray-200 rounded-full opacity-50 blur-3xl -z-10"></div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-100 py-8 text-center px-6 mt-auto">
+        <p class="text-sm text-gray-500 font-en">
+            &copy; <span id="year"></span> Kanya Jomponmang. All rights reserved.<br>
+            <span class="text-xs font-sans mt-2 block">Academic Portfolio</span>
+        </p>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-sm');
+                navbar.classList.replace('py-4', 'py-3');
+            } else {
+                navbar.classList.remove('shadow-sm');
+                navbar.classList.replace('py-3', 'py-4');
+            }
+        });
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100; // how many pixels of the element need to be visible
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+</html>
